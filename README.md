@@ -3,17 +3,18 @@
 # Flappy Bird by Compose
 
 ## :scroll: Description
-Build [Flappy Bird](https://flappybird.io/) game by [Jetpack Compose](https://developer.android.google.cn/jetpack/compose). 
+[Flappy Bird](https://flappybird.io/) game built with [Jetpack Compose](https://developer.android.google.cn/jetpack/compose). 
 
 ## :bulb: Motivation and Context
 <img src="https://z3.ax1x.com/2021/07/18/W3TSxI.png" width=110 align=left hspace="10" vspace="10"  >
 
-* All UI were built with Jetpack Compose UI tool kit.
-* Some image resources are captured from <https://flappybird.io/>.
-
+* All UI were built with [Jetpack Compose](https://developer.android.google.cn/jetpack/compose) UI tool kit
+* Some image resources are captured from <https://flappybird.io/>
+* Inspired by [compose-tetris](https://github.com/vitaviva/compose-tetris)
+* Hope u like it!
 
 ## :camera_flash: Screen Capture
-![](https://z3.ax1x.com/2021/07/25/WgVnW8.gif)
+![](https://z3.ax1x.com/2021/07/24/WcTK7q.gif)
 
 ## :memo:Blog
 <https://blog.csdn.net/allisonchen>
