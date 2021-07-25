@@ -17,7 +17,7 @@ fun FarBackground(modifier: Modifier) {
 
     Column {
         Image(
-            painter = painterResource(id = R.drawable.background_full),
+            painter = painterResource(id = R.drawable.background),
             contentScale = ContentScale.FillBounds,
             contentDescription = null,
             modifier = modifier.fillMaxSize()

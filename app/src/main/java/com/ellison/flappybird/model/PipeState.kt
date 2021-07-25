@@ -46,7 +46,7 @@ val MiddlePipe = 225.dp
 val LowPipe = 150.dp
 
 val PipeStateList = listOf(
-    PipeState(),
+    PipeState(offset = FirstPipeWidthOffset),
     PipeState(offset = (SecondPipeWidthOffset))
 )
 

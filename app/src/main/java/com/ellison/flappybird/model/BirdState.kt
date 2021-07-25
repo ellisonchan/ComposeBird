@@ -31,8 +31,8 @@ val BirdSizeHeight = 50.dp // 48.dp // Control bird's size
 val BirdHitGroundThreshold = BirdSizeHeight / 2 // BirdSizeHeight / 3
 
 const val BirdFallToGroundTimes = 20
-var BirdFallVelocity = 16.dp
+var BirdFallVelocity = 8.dp
 var BirdQuickFallVelocity = BirdFallVelocity * 4
 
-val BirdLiftVelocity = BirdFallVelocity * 3
+val BirdLiftVelocity = BirdFallVelocity * 8
 val BirdQuickLiftVelocity = BirdLiftVelocity * 1.5f

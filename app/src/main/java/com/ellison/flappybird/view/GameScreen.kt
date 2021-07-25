@@ -15,6 +15,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ellison.flappybird.*
 import com.ellison.flappybird.model.*
+import com.ellison.flappybird.ui.theme.DefaultBlackBackground
 import com.ellison.flappybird.ui.theme.ForegroundEarthYellow
 import com.ellison.flappybird.viewmodel.GameViewModel
 
@@ -31,6 +32,7 @@ fun GameScreen(
         modifier = Modifier
             .fillMaxSize()
             .background(ForegroundEarthYellow)
+            // .background(DefaultBlackBackground)
             .run {
                 pointerInteropFilter {
                     // Send lift action to let bird up.
@@ -141,7 +143,6 @@ fun GameScreen(
                             else -> {}
                         }
                     }
-
                 }
             }
 
@@ -215,16 +216,7 @@ fun PreviewGameScreen() {
             RealTimeBoardPreview()
         }
 
-        // Near foreground
-        Box(modifier = Modifier
-            .align(Alignment.CenterHorizontally)
-            .fillMaxWidth()
-            .fillMaxHeight(0.15f)
-        ) {
-            NearForeground(
-                modifier = Modifier.fillMaxSize()
-            )
-        }
+        previewForeground()
     }
 }
 

@@ -94,12 +94,4 @@ fun Flappy(clickable: Clickable = Clickable()) {
     GameScreen(clickable = clickable)
 }
 
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    FlappyBirdTheme {
-        Flappy()
-    }
-}
-
-const val AutoTickDuration = 100L // 300L Control bird and pipe speed.
+const val AutoTickDuration = 50L // 300L Control bird and pipe speed.

@@ -14,6 +14,7 @@ import com.ellison.flappybird.model.HighPipe
 
 import com.ellison.flappybird.R
 import com.ellison.flappybird.model.LowPipe
+import com.ellison.flappybird.model.MiddlePipe
 
 @Composable
 fun Pipe(
@@ -122,7 +123,21 @@ fun PipeGroupPreview() {
             PipeCover()
         }
 
-        Spacer(modifier = Modifier.width(120.dp))
+        Spacer(modifier = Modifier.width(60.dp))
+
+        Column(
+            modifier = Modifier.wrapContentWidth().fillMaxHeight(),
+            verticalArrangement = Arrangement.Center
+        ) {
+            Pipe(
+                height = MiddlePipe,
+                up = false
+            )
+            Spacer(modifier = Modifier.height(180.dp))
+            Pipe(height = LowPipe)
+        }
+
+        Spacer(modifier = Modifier.width(60.dp))
 
         Column(
             modifier = Modifier.wrapContentWidth().fillMaxHeight(),
@@ -133,7 +148,7 @@ fun PipeGroupPreview() {
                 up = false
             )
             Spacer(modifier = Modifier.height(180.dp))
-            Pipe(height = LowPipe)
+            Pipe(height = MiddlePipe)
         }
 
         Spacer(modifier = Modifier.width(60.dp))

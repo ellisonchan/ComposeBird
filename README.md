@@ -14,7 +14,7 @@
 * Hope u like it!
 
 ## :camera_flash: Screen Capture
-![](https://z3.ax1x.com/2021/07/24/WcTK7q.gif)
+![](https://z3.ax1x.com/2021/07/25/WRk7ff.gif)
 
 ## :memo:Blog
 <https://blog.csdn.net/allisonchen>

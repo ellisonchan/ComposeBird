@@ -18,6 +18,7 @@ import com.ellison.flappybird.R
 import com.ellison.flappybird.model.TempRoadWidthOffset
 import com.ellison.flappybird.model.GameAction
 import com.ellison.flappybird.model.ViewState
+import com.ellison.flappybird.ui.theme.DefaultBlackBackground
 import com.ellison.flappybird.viewmodel.GameViewModel
 
 @Composable
