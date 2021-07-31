@@ -9,7 +9,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.platform.LocalLifecycleOwner
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
@@ -17,6 +16,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ellison.flappybird.model.GameAction
 import com.ellison.flappybird.model.GameStatus
 import com.ellison.flappybird.ui.theme.FlappyBirdTheme
+import com.ellison.flappybird.util.StatusBarUtil
 import com.ellison.flappybird.view.Clickable
 import com.ellison.flappybird.view.GameScreen
 import com.ellison.flappybird.viewmodel.GameViewModel

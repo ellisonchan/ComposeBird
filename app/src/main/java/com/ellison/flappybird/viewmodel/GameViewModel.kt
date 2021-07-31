@@ -1,9 +1,11 @@
 package com.ellison.flappybird.viewmodel
 
+import android.app.Application
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
-import com.ellison.flappybird.LogUtil
+import com.ellison.flappybird.util.DensityUtil
+import com.ellison.flappybird.util.LogUtil
 import com.ellison.flappybird.model.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -11,7 +13,7 @@ import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
-class GameViewModel : ViewModel() {
+class GameViewModel(application: Application) : AndroidViewModel(application) {
     private val _viewState = MutableStateFlow(ViewState())
 
     val viewState = _viewState.asStateFlow()
@@ -117,7 +119,40 @@ class GameViewModel : ViewModel() {
 
                     GameAction.ScreenSizeDetect -> run {
                         LogUtil.printLog(message = "ACTION ScreenSizeDetect")
-                        state.copy()
+
+                        // Correct pipes' height and distance value according to true screen size.
+                        // 1. Convert px to dp
+                        val playZoneHeightInDp = DensityUtil.dxToDp(
+                            getApplication<Application>().resources,
+                            state.playZoneSize.second
+                        )
+
+                        // 2. Change height and distance
+                        TotalPipeHeight = playZoneHeightInDp.dp
+                        HighPipe = TotalPipeHeight * MaxPipeFraction
+                        MiddlePipe = TotalPipeHeight * CenterPipeFraction
+                        LowPipe = TotalPipeHeight * MinPipeFraction
+                        PipeDistance = TotalPipeHeight * PipeDistanceFraction
+
+                        // change bird constants.
+                        BirdSizeHeight = PipeDistance * BirdPipeDistanceFraction
+                        BirdSizeWidth = BirdSizeHeight * 1.44f
+
+                        // 3. Reset pipe state instance
+                        val newPipeStateList: List<PipeState> = listOf(
+                            state.pipeStateList[0].correct(),
+                            state.pipeStateList[1].correct()
+                        )
+
+                        // reset bird state instance
+                        val newBirdState = state.birdState.correct()
+
+                        LogUtil.printLog(message = "newPipeStateList:$newPipeStateList + newBirdState:$newBirdState")
+
+                        state.copy(
+                            birdState = newBirdState,
+                            pipeStateList = newPipeStateList
+                        )
                     }
 
                     GameAction.PipeExit -> run {

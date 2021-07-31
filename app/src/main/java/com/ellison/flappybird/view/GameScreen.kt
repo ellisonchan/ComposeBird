@@ -15,8 +15,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.ellison.flappybird.*
 import com.ellison.flappybird.model.*
-import com.ellison.flappybird.ui.theme.DefaultBlackBackground
 import com.ellison.flappybird.ui.theme.ForegroundEarthYellow
+import com.ellison.flappybird.util.LogUtil
 import com.ellison.flappybird.viewmodel.GameViewModel
 
 @Composable

@@ -1,22 +1,19 @@
 package com.ellison.flappybird.view
 
-import android.view.MotionEvent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.rotate
-import androidx.compose.ui.geometry.Offset
-import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.ellison.flappybird.*
 import com.ellison.flappybird.R
 import com.ellison.flappybird.model.*
+import com.ellison.flappybird.util.LogUtil
 import com.ellison.flappybird.viewmodel.GameViewModel
 
 @Composable
@@ -64,7 +61,7 @@ fun Bird(
             contentScale = ContentScale.FillBounds,
             contentDescription = null,
             modifier = Modifier
-                .size(BirdSizeWidth, BirdSizeHeight)
+                .size(state.birdState.birdW, state.birdState.birdH)
                 .align(Alignment.Center)
                 .offset(y = correctBirdHeight)
                 .rotate(rotateDegree)  // Rotate 90 degree when dying/ over.

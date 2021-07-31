@@ -8,7 +8,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.ellison.flappybird.LogUtil
+import com.ellison.flappybird.util.LogUtil
 import com.ellison.flappybird.R
 
 @Composable

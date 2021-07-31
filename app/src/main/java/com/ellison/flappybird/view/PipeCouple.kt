@@ -7,8 +7,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.platform.LocalDensity
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.ellison.flappybird.*
 import com.ellison.flappybird.model.*
+import com.ellison.flappybird.util.LogUtil
 import com.ellison.flappybird.viewmodel.GameViewModel
 
 @Composable

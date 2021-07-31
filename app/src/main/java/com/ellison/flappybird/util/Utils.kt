@@ -1,18 +1,17 @@
-package com.ellison.flappybird
+package com.ellison.flappybird.util
 
 import android.app.Activity
+import android.content.res.Resources
 import android.graphics.Color
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import kotlin.random.Random
+import com.ellison.flappybird.R
 
 object StatusBarUtil {
     fun transparentStatusBar(activity: Activity) {
@@ -25,6 +24,11 @@ object StatusBarUtil {
             window.statusBarColor = Color.TRANSPARENT
         }
     }
+}
+
+object DensityUtil {
+    fun dxToDp(resources: Resources, px: Int): Int =
+        (px / resources.displayMetrics.density + 0.5f).toInt()
 }
 
 object ValueUtil {
