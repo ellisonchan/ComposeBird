@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+  <resources>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -7,6 +7,16 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="skyBlue">#7CC4CD</color>
 
+    <color name="skyBlue">#7CC4CD</color>
+    <color name="skyBlueDark">#047a89</color>
+    <color name="dirtYellow">#DDD896</color>
+    <color name="dirtOrange">#ce7b27</color>
+    <color name="birdYellowLight">#ecfcdd</color>
+    <color name="birdYellow">#d1bf30</color>
+
+    <!-- Use icon mask color as window background,
+    due to icon bg color not supported before 31 -->
+    <!-- <color name="appBackground">@color/skyBlue</color>-->
+    <color name="appBackground">@color/birdYellowLight</color>
 </resources>

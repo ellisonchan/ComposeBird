@@ -3,6 +3,19 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_bird2svg_3.xml" value="0.2324074074074074" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_bird2svg_new.xml" value="0.2324074074074074" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_icon_bird.xml" value="0.25" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_icon_bird_final.xml" value="0.2" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_icon_bird_new.xml" value="0.2" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_icon_bird_small.xml" value="0.19895833333333332" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_icon_bird_small_animated.xml" value="0.25" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_icon_bird_small_animated_rotate.xml" value="0.1" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_icon_bird_small_animated_translate.xml" value="0.25" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_icon_bird_wide.xml" value="0.25" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_launcher_background_bird.xml" value="0.2324074074074074" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/drawable/ic_launcher_bird_final_background.xml" value="0.2324074074074074" />
+        <entry key="..\:/MyGit/ComposeBird/app/src/main/res/mipmap-anydpi-v26/ic_launcher_bird_final.xml" value="0.25" />
         <entry key="..\:/MyGit/FlappyBird/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3388888888888889" />
         <entry key="..\:/MyGit/FlappyBird/app/src/main/res/drawable/ic_launcher_background.xml" value="0.3388888888888889" />
         <entry key="..\:/MyGit/FlappyBird/app/src/main/res/drawable/ic_launcher_background_bird.xml" value="0.2953703703703704" />

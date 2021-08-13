@@ -1,0 +1,19 @@
+<resources>
+    <integer name="icon_animator_duration">1000</integer>
+
+    <integer name="splash_exit_total_duration">600</integer>
+    <integer name="splash_exit_icon_duration">600</integer>
+
+    <integer name="icon_animator_translate_from">-202</integer>
+    <integer name="icon_animator_translate_from_rotate">101</integer>
+    <integer name="icon_animator_translate_to">0</integer>
+
+    <integer name="icon_animator_rotate_from">-180</integer>
+    <integer name="icon_animator_rotate_to">0</integer>
+
+    <item format="float" name="icon_animator_alpha_from" type="dimen">0.2</item>
+    <item format="float" name="icon_animator_alpha_to" type="dimen">1.0</item>
+
+    <item format="float" name="icon_animator_scale_from" type="dimen">0.2</item>
+    <item format="float" name="icon_animator_scale_to" type="dimen">1.0</item>
+</resources>

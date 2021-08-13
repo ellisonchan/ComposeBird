@@ -1,6 +1,7 @@
 package com.ellison.flappybird.viewmodel
 
 import android.app.Application
+import android.os.SystemClock
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -14,6 +15,14 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class GameViewModel(application: Application) : AndroidViewModel(application) {
+    companion object {
+        const val WORK_DURATION = 2000L
+    }
+
+    private val initTime = SystemClock.uptimeMillis()
+
+    fun isDataReady() = SystemClock.uptimeMillis() - initTime > WORK_DURATION
+
     private val _viewState = MutableStateFlow(ViewState())
 
     val viewState = _viewState.asStateFlow()

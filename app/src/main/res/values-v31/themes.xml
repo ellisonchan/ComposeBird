@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="JetpackSplashTheme" parent="JetpackSplashTheme.Base">
+        <!-- Animated vector drawable -->
+        <!-- <item name="windowSplashScreenAnimatedIcon">@drawable/ic_icon_bird_small_animated_rotate</item>-->
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_icon_bird_small_animated_translate</item>
+
+        <!-- icon background color-->
+        <item name="android:windowSplashScreenIconBackgroundColor">@color/skyBlue</item>
+
+        <!-- brand image-->
+        <item name="android:windowSplashScreenBrandingImage">@drawable/ic_tm_brand</item>
+    </style>
+</resources>
