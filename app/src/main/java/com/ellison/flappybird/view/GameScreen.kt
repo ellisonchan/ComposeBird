@@ -6,6 +6,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.pointerInteropFilter
 import androidx.compose.ui.layout.onGloballyPositioned
@@ -19,6 +20,7 @@ import com.ellison.flappybird.ui.theme.ForegroundEarthYellow
 import com.ellison.flappybird.util.LogUtil
 import com.ellison.flappybird.viewmodel.GameViewModel
 
+@OptIn(ExperimentalComposeUiApi::class)
 @Composable
 fun GameScreen(
     clickable: Clickable = Clickable()

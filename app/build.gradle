@@ -4,13 +4,12 @@ plugins {
 }
 
 android {
-    compileSdk 31
-    buildToolsVersion "30.0.3"
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.ellison.flappybird"
         minSdk 23
-        targetSdk 31
+        targetSdk 34
         versionCode 2
         versionName "1.1"
 
@@ -32,7 +31,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
-        useIR = true
     }
     buildFeatures {
         compose true
@@ -41,34 +39,54 @@ android {
         kotlinCompilerExtensionVersion compose_version
         kotlinCompilerVersion '1.4.32'
     }
+    namespace 'com.ellison.flappybird'
 }
 
 dependencies {
-    dependencies {
-        implementation 'com.google.android.material:material:1.3.0'
+    def composeBom = platform('androidx.compose:compose-bom:2023.09.01')
+    implementation composeBom
 
-        implementation 'androidx.compose.ui:ui:1.0.0-beta07'
-        // Tooling support (Previews, etc.)
-        implementation 'androidx.compose.ui:ui-tooling:1.0.0-beta07'
-        // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
-        implementation 'androidx.compose.foundation:foundation:1.0.0-beta07'
-        // Material Design
-        implementation 'androidx.compose.material:material:1.0.0-beta07'
-        // Material design icons
-        implementation 'androidx.compose.material:material-icons-core:1.0.0-beta07'
-        implementation 'androidx.compose.material:material-icons-extended:1.0.0-beta07'
-        // Integration with activities
-        implementation 'androidx.activity:activity-compose:1.3.0-alpha08'
-        // Integration with ViewModels
-        implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha05'
-        // Integration with observables
-        implementation 'androidx.compose.runtime:runtime-livedata:1.0.0-beta07'
-        implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.0-beta07'
+    implementation 'com.google.android.material:material:1.3.0'
 
-        // UI Tests
-        androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.0-beta07'
+    implementation 'androidx.compose.ui:ui'
+    // Tooling support (Previews, etc.)
+    implementation 'androidx.compose.ui:ui-tooling'
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    implementation 'androidx.compose.foundation:foundation'
+    // Material Design
+    implementation 'androidx.compose.material:material'
+    // Material design icons
+    implementation 'androidx.compose.material:material-icons-core'
+    implementation 'androidx.compose.material:material-icons-extended'
+    // Integration with activities
+    implementation 'androidx.activity:activity-compose:1.7.2'
+    // Integration with ViewModels
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1'
+    // Integration with observables
+    implementation 'androidx.compose.runtime:runtime-livedata:1.5.4'
+    implementation 'androidx.compose.runtime:runtime-rxjava2:1.5.4'
 
-        // Optional - APIs for SplashScreen, including compatibility helpers on devices prior Android 12
-        implementation "androidx.core:core-splashscreen:1.0.0-alpha01"
-    }
+//        implementation 'androidx.compose.ui:ui:1.0.0-beta07'
+//        // Tooling support (Previews, etc.)
+//        implementation 'androidx.compose.ui:ui-tooling:1.0.0-beta07'
+//        // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+//        implementation 'androidx.compose.foundation:foundation:1.0.0-beta07'
+//        // Material Design
+//        implementation 'androidx.compose.material:material:1.0.0-beta07'
+//        // Material design icons
+//        implementation 'androidx.compose.material:material-icons-core:1.0.0-beta07'
+//        implementation 'androidx.compose.material:material-icons-extended:1.0.0-beta07'
+//        // Integration with activities
+//        implementation 'androidx.activity:activity-compose:1.3.0-alpha08'
+//        // Integration with ViewModels
+//        implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha05'
+//        // Integration with observables
+//        implementation 'androidx.compose.runtime:runtime-livedata:1.0.0-beta07'
+//        implementation 'androidx.compose.runtime:runtime-rxjava2:1.0.0-beta07'
+
+    // UI Tests
+    androidTestImplementation 'androidx.compose.ui:ui-test-junit4:1.0.0-beta07'
+
+    // Optional - APIs for SplashScreen, including compatibility helpers on devices prior Android 12
+    implementation "androidx.core:core-splashscreen:1.0.0-alpha01"
 }
